@@ -1,42 +1,35 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
+@layer base {
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+  html, body, #root {
+    @apply bg-[#050505] text-white min-h-screen;
+    margin: 0;
+    padding: 0;
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+@layer components {
+  .hero-card {
+
+    @apply bg-[#0D0D0D] border border-white/5 rounded-[2.5rem] 
+           shadow-[0_40px_100px_rgba(0,0,0,0.9)];
   }
-}
 
-.card {
-  padding: 2em;
-}
+  .btn-flame-main {
+    @apply px-8 py-4 bg-[#FF4500] text-white font-bold rounded-full transition-all duration-300 
+           hover:bg-[#B22222] hover:shadow-[0_0_20px_rgba(255,69,0,0.6)] transform hover:scale-105 active:scale-95;
+  }
 
-.read-the-docs {
-  color: #888;
+  .btn-flame-outline {
+    @apply px-8 py-4 text-[#FFD700] font-bold rounded-full border-2 border-[#FF4500]
+           transition-all duration-300 hover:bg-[#FF4500]/10 hover:border-[#FFD700] active:scale-95;
+  }
+
+  .text-burn {
+    @apply font-extrabold leading-tight bg-gradient-to-r from-[#B22222] via-[#FF4500] to-[#FFD700] 
+           bg-clip-text text-transparent drop-shadow-[0_0_15px_rgba(255,69,0,0.3)];
+  }
 }

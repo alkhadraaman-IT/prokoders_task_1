@@ -1,48 +1,93 @@
-import React from 'react';
-import HeroImage from '../assets/hero-illustration.png';
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import HeroImage from '../assets/herofire.jpg';
 
 const HeroSection = () => {
+  const navigate = useNavigate();
+  const [showDemo, setShowDemo] = useState(false);
+
   return (
-    <section className="bg-white px-6 py-12 sm:px-16 sm:py-20 rounded-2xl shadow-2xl mx-auto max-w-7xl">
-      <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
-        <div className="lg:w-1/2">
-          <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold leading-tight mb-4">
-            UNLOCK YOUR CREATIVE FLOW
-          </h1>
+    <section className="min-h-screen flex items-center justify-center p-6 relative">
+      <div className="hero-card w-full max-w-7xl p-8 sm:p-16 lg:p-20">
+        <div className="flex flex-col lg:flex-row items-center justify-center gap-16 w-full">
           
-          <p className="text-lg sm:text-xl text-slate-600 mb-8">
-            Simplify your projects, collaborate effortlessly, and bring ideas to life with our intuitive platform
-          </p>
-
-          <div className="flex gap-4">
-            <button
-              className="px-6 py-3 text-white font-semibold rounded-lg shadow-md transition duration-300 
-                         bg-indigo-500 hover:bg-indigo-600 hover:shadow-lg transform hover:scale-[1.02]"
-              onClick={() => console.log('Get Started Clicked')}
-            >
-              Get Started
-            </button>
+          <div className="lg:w-1/2 text-center lg:text-left">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black leading-tight mb-6 text-burn uppercase italic tracking-tighter">
+              UNLOCK YOUR <br /> CREATIVE FLOW
+            </h1>
             
-            <button
-              className="px-6 py-3 text-indigo-600 font-semibold rounded-lg border-2 border-indigo-200 
-                         transition duration-300 hover:bg-indigo-50 hover:border-indigo-600"
-              onClick={() => console.log('Watch Demo Clicked')}
-            >
-              Watch Demo
-            </button>
-          </div>
-        </div>
+            <p className="text-lg sm:text-xl text-gray-400 mb-10 max-w-xl mx-auto lg:mx-0 font-medium">
+              Simplify your projects, collaborate effortlessly, and bring ideas to life with our intuitive platform.
+            </p>
 
-        <div className="lg:w-1/2 mt-12 lg:mt-0">
-          <div className="w-full h-80 bg-gray-200 rounded-lg flex items-center justify-center text-gray-500 border border-dashed">
-            <img 
-              src={HeroImage} 
-              alt="Illustration: hero-illustration.png" 
-              className="w-full h-auto rounded-lg object-contain" 
-            />
+            <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
+              <button 
+                onClick={() => navigate('/courses')}
+                className="btn-flame-main px-8 py-4 cursor-pointer"
+              >
+                Get Started 🔥
+              </button>
+              
+              <button 
+                onClick={() => setShowDemo(true)}
+                className="btn-flame-outline px-8 py-4 cursor-pointer"
+              >
+                Watch Demo
+              </button>
+            </div>
+          </div>
+
+          <div className="lg:w-1/2 flex justify-center">
+            <div className="relative group">
+              <div className="absolute inset-0 bg-[#FF4500]/10 blur-[60px] rounded-full group-hover:bg-[#FF4500]/20 transition-all duration-500"></div>
+              <img 
+                src={HeroImage} 
+                alt="Programming Hero" 
+                className="relative z-10 w-full max-w-[500px] h-auto object-contain transform group-hover:translate-y-[-10px] transition-all duration-500" 
+              />
+            </div>
           </div>
         </div>
       </div>
+
+      {/* --- نافذة الفيديو المنبثقة (Real Video Modal) --- */}
+      {showDemo && (
+        <div 
+          className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/90 backdrop-blur-md transition-all"
+          onClick={() => setShowDemo(false)} // إغلاق عند الضغط خارج الفيديو
+        >
+          <div 
+            className="relative w-full max-w-4xl bg-[#111] rounded-[20px] overflow-hidden border border-white/10 shadow-2xl"
+            onClick={(e) => e.stopPropagation()} // منع الإغلاق عند الضغط على الفيديو نفسه
+          >
+            {/* زر الإغلاق */}
+            <button 
+              onClick={() => setShowDemo(false)}
+              className="absolute -top-2 -right-2 md:top-4 md:right-4 text-white hover:text-flame-orange z-[110] font-bold bg-black w-10 h-10 rounded-full border border-white/20 cursor-pointer flex items-center justify-center shadow-lg"
+            >
+              ✕
+            </button>
+
+            <div className="aspect-video bg-black">
+              {/* فيديو يوتيوب عن أهمية البرمجة */}
+              <iframe 
+                className="w-full h-full"
+                src="https://www.youtube.com/embed/nKIu9yen5nc?autoplay=1" 
+                title="What Most Schools Don't Teach"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowFullScreen
+              ></iframe>
+            </div>
+            
+            <div className="p-4 bg-[#111] text-center border-t border-white/5">
+              <p className="text-flame-orange text-sm font-black italic tracking-widest uppercase">
+                Fuel Your Passion for Code
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 };

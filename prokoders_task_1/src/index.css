@@ -1,3 +1,92 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  body {
+  @apply bg-[#0A0A0A] text-white; 
+    }
+}
+
+@layer components {
+
+ 
+  .hero-card {
+    @apply bg-[#161616] border border-white/10 rounded-[2.5rem] 
+           shadow-[10px_25px_80px_rgba(0,0,0,0.7),_inset_0_1px_1px_rgba(255,255,255,0.05)];
+  }
+
+  .btn-flame-main {
+    @apply px-8 py-4 text-white font-bold rounded-full shadow-lg transition duration-300 
+                       bg-flame-orange hover:bg-flame-red hover:shadow-[0_0_20px_rgba(255,69,0,0.8)] transform hover:scale-110;
+  }
+
+  .btn-flame-outline {
+    @apply px-8 py-4 text-flame-yellow font-bold rounded-full border-2 border-flame-orange 
+                       transition duration-300 hover:bg-white/5 hover:border-flame-yellow shadow-[inset_0_0_10px_rgba(255,215,0,0.2)];
+  }
+
+  .text-burn {
+    @apply text-4xl sm:text-6xl lg:text-7xl font-extrabold leading-tight mb-6 bg-gradient-to-r from-flame-red via-flame-orange to-flame-yellow bg-clip-text text-transparent drop-shadow-[0_0_15px_rgba(255,69,0,0.5)];
+  }
+  
+@layer components {
+  .course-card {
+    @apply bg-[#161616] border border-white/5 rounded-2xl overflow-hidden 
+           transition-all duration-500 hover:-translate-y-2 
+           hover:shadow-[0_10px_30px_rgba(255,69,0,0.15)];
+}
+}
+
+@layer components {
+  .nav-link {
+    @apply text-gray-400 font-medium transition-all duration-300 hover:text-white px-2 py-1 relative;
+  }
+
+  .active.nav-link {
+    @apply text-white;
+    text-shadow: 0 0 10px rgba(255, 69, 0, 0.6);
+  }
+  
+  .active.nav-link::after {
+    content: '';
+    @apply absolute -bottom-1 left-0 w-full h-[2px] bg-flame-orange shadow-[0_0_8px_#FF4500];
+  }
+
+  .logo-text {
+    @apply font-black tracking-tighter transition-all duration-300;
+    font-size: 0.75rem; 
+  }
+  
+  @screen md {
+    .logo-text {
+      font-size: 1.25rem; 
+    }
+  }
+}
+
+@layer components {
+
+  .nav-link {
+    @apply text-gray-400 transition-all duration-300 px-2 py-1 relative;
+  }
+
+  .nav-link:hover {
+    @apply text-white;
+    text-shadow: 0 0 12px #FF4500; 
+    }
+
+  .cart-icon-container:hover {
+    @apply scale-110; 
+    filter: drop-shadow(0 0 8px #FF4500); 
+    }
+
+  .nav-link.active {
+    @apply text-flame-orange;
+  }
+  .nav-link.active::after {
+    content: '';
+    @apply absolute -bottom-1 left-0 w-full h-[2px] bg-flame-orange;
+  }
+}
+}
