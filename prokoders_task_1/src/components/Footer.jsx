@@ -6,7 +6,6 @@ const Footer = () => {
   return (
     <footer className="bg-[#080808] border-t border-white/5 pt-16 pb-8 px-6 md:px-12">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
-        {/* القسم الأول: الشعار */}
         <div className="col-span-1">
           <div className="flex items-center gap-2 mb-4">
             <img src={logo} alt="Logo" className="w-12 h-12 object-contain" />
@@ -17,7 +16,6 @@ const Footer = () => {
           </p>
         </div>
 
-        {/* القسم الثاني: روابط سريعة */}
         <div>
           <h4 className="font-bold mb-6">Quick Links</h4>
           <ul className="space-y-4">
@@ -27,7 +25,6 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* القسم الثالث: تواصل معنا */}
         <div>
           <h4 className="font-bold mb-6">Contact Info</h4>
           <ul className="space-y-4 text-sm text-gray-500">
@@ -37,7 +34,6 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* القسم الرابع: السوشيال ميديا بأسمائها */}
 <div>
   <h4 className="font-bold mb-6 uppercase text-xs tracking-widest text-white">Follow Our Fire</h4>
   <div className="flex flex-col gap-4">
