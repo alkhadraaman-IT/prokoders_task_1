@@ -2,7 +2,6 @@ import React from 'react';
 import { NavLink, Link, useNavigate } from 'react-router-dom';
 import { useCart } from '../pages/CartContext';
 import { User, LogOut, ShoppingCart } from 'lucide-react'; 
-import logo from '../assets/logo.jpg'; 
 
 const Navbar = ({ isLoggedIn, setIsLoggedIn, user }) => {
   const { cartItems } = useCart();
@@ -19,7 +18,7 @@ const Navbar = ({ isLoggedIn, setIsLoggedIn, user }) => {
     <nav className="flex justify-between items-center px-3 md:px-12 py-3 bg-[#0D0D0D]/95 backdrop-blur-md border-b border-white/5 sticky top-0 z-50">
       
       <Link to="/" className="flex items-center gap-1 group shrink-0">
-        <img src={logo} alt="Logo" className="w-10 h-10 object-contain transition-transform group-hover:rotate-12" />
+        <img src='./assets/logo.jpg' alt="Logo" className="w-10 h-10 object-contain transition-transform group-hover:rotate-12" />
         <span className="logo-text uppercase font-black tracking-tighter text-sm md:text-xl text-white">
           FIRE<span className="text-burn">LAB</span>
         </span>

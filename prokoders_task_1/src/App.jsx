@@ -57,7 +57,7 @@ const [isLoggedIn, setIsLoggedIn] = useState(false);
         </main>
 
 
-          <Footer />
+<Footer isLoggedIn={isLoggedIn} />
           
         </div>
       </BrowserRouter>

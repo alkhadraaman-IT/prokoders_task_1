@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import HeroImage from '../assets/herofire.jpg';
 
 const HeroSection = () => {
   const navigate = useNavigate();
@@ -41,7 +40,7 @@ const HeroSection = () => {
             <div className="relative group">
               <div className="absolute inset-0 bg-[#FF4500]/10 blur-[60px] rounded-full group-hover:bg-[#FF4500]/20 transition-all duration-500"></div>
               <img 
-                src={HeroImage} 
+                src='./assets/herofire.jpg' 
                 alt="Programming Hero" 
                 className="relative z-10 w-full max-w-[500px] h-auto object-contain transform group-hover:translate-y-[-10px] transition-all duration-500" 
               />

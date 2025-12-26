@@ -1,10 +1,3 @@
-import reactImg from '../assets/react.jpg';
-import nodeImg from '../assets/node.jpg';
-import uiuxImg from '../assets/uiux.png';
-import pythonImg from '../assets/python.png';
-import jsImg from '../assets/js.png';
-import nextImg from '../assets/next.png';
-import tacssImg from '../assets/tailwindcss.png';
 
 export const coursesData = [
   {
@@ -19,7 +12,7 @@ export const coursesData = [
     duration: "4 Weeks",
     instructor: "ProCoder Ali",
     language: "English",
-    image: reactImg 
+    image: "./assets/react.jpg"
   },
   {
     id: 2,
@@ -33,7 +26,7 @@ export const coursesData = [
     duration: "6 Weeks",
     instructor: "Sara Ahmed",
     language: "English",
-    image: nodeImg
+    image: "./assets/node.jpg"
   },
   {
     id: 3,
@@ -47,7 +40,7 @@ export const coursesData = [
     duration: "2 Weeks",
     instructor: "Zaid Omar",
     language: "English",
-    image: tacssImg
+    image: "./assets/tailwindcss.png"
   },
   {
     id: 6,
@@ -61,7 +54,7 @@ export const coursesData = [
     duration: "3 Weeks",
     instructor: "Noor J.",
     language: "English",
-    image: uiuxImg
+    image: "./assets/uiux.png"
   },
   {
     id: 4,
@@ -75,7 +68,7 @@ export const coursesData = [
     duration: "8 Weeks",
     instructor: "Hassan Ali",
     language: "English",
-    image: pythonImg
+    image: "./assets/python.png"
   },
   {
     id: 5,
@@ -89,7 +82,7 @@ export const coursesData = [
     duration: "3 Weeks",
     instructor: "Mona Adel",
     language: "English",
-    image: jsImg
+    image: "./assets/js.png"
   },
   {
     id: 7,
@@ -103,6 +96,6 @@ export const coursesData = [
     duration: "2 Weeks",
     instructor: "Ali Mohamed",
     language: "English",
-    image: nextImg
+    image: "./assets/next.png"
   },
 ];

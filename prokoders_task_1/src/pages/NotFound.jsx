@@ -1,6 +1,5 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import errorImg from '../assets/404code.jpg'; 
 
 const NotFound = ({ message }) => {
   const navigate = useNavigate();
@@ -9,7 +8,7 @@ const NotFound = ({ message }) => {
     <div className="min-h-[80vh] bg-black text-white flex flex-col items-center justify-center p-6 text-center">
 
       <img 
-        src={errorImg} 
+        src='./assets/404code.jpg' 
         alt="404 FireLab" 
         className="w-full max-w-lg rounded-[40px] shadow-[0_0_50px_rgba(255,69,0,0.2)] mb-8"
       />

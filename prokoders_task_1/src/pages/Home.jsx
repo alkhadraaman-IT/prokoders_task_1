@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import HeroSection from './HeroSection';
+import HeroSection from '../pages/HeroSection';
 import CourseCard from '../pages/CourseCard';
 import { coursesData } from '../data/coursesData';
 import { ArrowRight } from 'lucide-react'; 
