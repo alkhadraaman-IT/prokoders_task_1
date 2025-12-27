@@ -38,10 +38,10 @@ const [isLoggedIn, setIsLoggedIn] = useState(false);
           <main className="flex-grow">
       <Routes>
         <Route path="/" element={<Home isLoggedIn={isLoggedIn} />} />
-              <Route path="/about" element={<AboutPage />} />
-              <Route path="/courses" element={<CoursesPage />} />
-              <Route path="/course/:id" element={<CourseDetails />} />
-              <Route path="/cart" element={<CartPage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/courses" element={<CoursesPage />} />
+        <Route path="/course/:id" element={<CourseDetails isLoggedIn={isLoggedIn} />} />
+        <Route path="/cart" element={<CartPage />} />
 
         <Route path="/login" element={<LoginPage setIsLoggedIn={setIsLoggedIn} setUser={setUser} />} />
         
