@@ -4,7 +4,7 @@ import { coursesData } from '../data/coursesData';
 import { useCart } from '../pages/CartContext'; 
 import NotFound from './NotFound';
 
-const CourseDetails = () => {
+const CourseDetails = ({ isLoggedIn }) => {
   const { addToCart } = useCart();
   const { id } = useParams();
   const navigate = useNavigate();
@@ -12,14 +12,14 @@ const CourseDetails = () => {
   const course = coursesData.find(item => item.id === parseInt(id));
 
   const handleEnroll = () => {
-    const isLoggedIn = localStorage.getItem('user'); 
+    const savedStatus = localStorage.getItem('isLoggedIn') === 'true'; 
 
-    if (!isLoggedIn) {
+    if (!savedStatus) {
       navigate('/login');
-      return;
+    } else {
+      addToCart(course);
+      navigate('/cart');
     }
-
-    addToCart(course);
   };
 
   if (!course) {

@@ -10,8 +10,8 @@ const ProfilePage = () => {
   const [purchasedCourses, setPurchasedCourses] = useState([]);
   
   const [user, setUser] = useState({
-    name: "Ahmad Ali",
-    email: "ahmad@firelab.com",
+    name: "Aman Alk",
+    email: "Aman@firelab.com",
     phone: "0930000000",
     education: "Bachelor's Degree",
     joinedDate: "October 2025"
