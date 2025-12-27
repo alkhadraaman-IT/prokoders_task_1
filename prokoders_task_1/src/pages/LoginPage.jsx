@@ -9,7 +9,7 @@ const LoginPage = ({ setIsLoggedIn, setUser }) => {  const [showPassword, setSho
     e.preventDefault();
 
     setIsLoggedIn(true); 
-    setUser({ name: "Ahmad" }); 
+    setUser({ name: "Aman" }); 
     localStorage.setItem('isLoggedIn', 'true');
     navigate('/profile'); 
   };

@@ -21,7 +21,7 @@ const CourseDetails = ({ isLoggedIn }) => {
       navigate('/cart');
     }
   };
-
+  
   if (!course) {
     return <NotFound message="THIS COURSE HAS BEEN EXTINGUISHED!" />;
   }

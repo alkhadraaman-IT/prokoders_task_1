@@ -1,4 +1,3 @@
-
 export const coursesData = [
   {
     id: 1,
@@ -12,7 +11,7 @@ export const coursesData = [
     duration: "4 Weeks",
     instructor: "ProCoder Ali",
     language: "English",
-    image: "./assets/react.jpg"
+    image: "https://reactnative.dev/img/logo-og.png"
   },
   {
     id: 2,
@@ -26,7 +25,7 @@ export const coursesData = [
     duration: "6 Weeks",
     instructor: "Sara Ahmed",
     language: "English",
-    image: "./assets/node.jpg"
+    image: "https://www.indiegamebundles.com/wp-content/uploads/2015/02/nodejs.png"
   },
   {
     id: 3,
@@ -40,7 +39,7 @@ export const coursesData = [
     duration: "2 Weeks",
     instructor: "Zaid Omar",
     language: "English",
-    image: "./assets/tailwindcss.png"
+    image: "https://www.colourtheme.com/images/tailwind-thumb.webp"
   },
   {
     id: 6,
@@ -54,7 +53,7 @@ export const coursesData = [
     duration: "3 Weeks",
     instructor: "Noor J.",
     language: "English",
-    image: "./assets/uiux.png"
+    image: "https://undolearning.com/wp-content/uploads/2024/04/Visual-Hierarchy-in-UI-Design-Guiding-Users-Through-Your-Interface-620x420.jpg"
   },
   {
     id: 4,
@@ -68,7 +67,7 @@ export const coursesData = [
     duration: "8 Weeks",
     instructor: "Hassan Ali",
     language: "English",
-    image: "./assets/python.png"
+    image: "https://sharpminds.com/wp-content/uploads/2023/10/Python.png"
   },
   {
     id: 5,
@@ -82,7 +81,7 @@ export const coursesData = [
     duration: "3 Weeks",
     instructor: "Mona Adel",
     language: "English",
-    image: "./assets/js.png"
+    image: "https://i.ytimg.com/vi/4q9K6B566_M/maxresdefault.jpg"
   },
   {
     id: 7,
@@ -96,6 +95,6 @@ export const coursesData = [
     duration: "2 Weeks",
     instructor: "Ali Mohamed",
     language: "English",
-    image: "./assets/next.png"
+    image: "https://wallpapercave.com/wp/wp11846968.png"
   },
 ];
